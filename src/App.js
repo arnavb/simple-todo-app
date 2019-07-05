@@ -7,12 +7,7 @@ export default class App extends Component {
     return (
       <div>
         <h1 className='title'>Todo App</h1>
-        <TodoList
-          handleSubmit={event => {
-            event.preventDefault();
-            alert(`Submitted ${event.target.value}!`);
-          }}
-        />
+        <TodoList />
       </div>
     );
   }
