@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import TodoItem from './TodoItem';
+
+let todoId = 1;
 
 export default class TodoList extends Component {
   constructor(props) {
@@ -16,12 +19,25 @@ export default class TodoList extends Component {
     });
   };
 
-  addItem = event => {};
+  addItem = event => {
+    const { todoValue, items } = this.state;
+
+    this.setState({
+      todoValue: '',
+      items: [...items, { value: todoValue, id: todoId++ }],
+    });
+
+    event.preventDefault();
+  };
 
   render() {
+    const todoItems = this.state.items.map(todo => (
+      <TodoItem value={todo.value} key={todo.id} />
+    ));
+
     return (
       <div className='todoList'>
-        <form onSubmit={this.props.handleSubmit}>
+        <form onSubmit={this.addItem}>
           <input
             type='text'
             onChange={this.onChange}
@@ -30,6 +46,8 @@ export default class TodoList extends Component {
           />
           <input type='submit' value='Add' />
         </form>
+
+        <ul>{todoItems}</ul>
       </div>
     );
   }
