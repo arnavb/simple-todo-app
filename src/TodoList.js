@@ -5,22 +5,22 @@ let todoId = 1;
 
 export default class TodoList extends Component {
   state = {
-    todoValue: '',
+    inputValue: '',
     items: [],
   };
 
   onChange = event => {
     this.setState({
-      todoValue: event.target.value,
+      inputValue: event.target.value,
     });
   };
 
   addItem = event => {
-    const { todoValue, items } = this.state;
-
-    this.setState({
-      todoValue: '',
-      items: [...items, { value: todoValue, id: todoId++ }],
+    this.setState(({ inputValue, items }, props) => {
+      return {
+        inputValue: '',
+        items: [...items, { value: inputValue, id: todoId++ }],
+      };
     });
 
     event.preventDefault();
@@ -37,7 +37,7 @@ export default class TodoList extends Component {
           <input
             type='text'
             onChange={this.onChange}
-            value={this.state.todoValue}
+            value={this.state.inputValue}
             placeholder='Enter a task'
           />
           <input type='submit' value='Add' />
