@@ -4,14 +4,10 @@ import TodoItem from './TodoItem';
 let todoId = 1;
 
 export default class TodoList extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      todoValue: '',
-      items: [],
-    };
-  }
+  state = {
+    todoValue: '',
+    items: [],
+  };
 
   onChange = event => {
     this.setState({
