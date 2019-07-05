@@ -16,7 +16,11 @@ export default class TodoList extends Component {
   };
 
   addItem = event => {
-    this.setState(({ inputValue, items }, props) => {
+    this.setState(({ inputValue, items }) => {
+      if (inputValue.length === 0) {
+        return null;
+      }
+
       return {
         inputValue: '',
         items: [...items, { value: inputValue, id: todoId++ }],
