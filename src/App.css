@@ -1,7 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
-
 .title {
   color: white;
   font-family: 'Lobster', sans-serif;
-  font-size: 3em;
+  font-size: 4em;
+  margin: 10px 10px;
+}
+
+.app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

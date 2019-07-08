@@ -1,12 +1,23 @@
 import React, { Component } from 'react';
 import TodoItem from './TodoItem';
+import './TodoList.css';
+import './fonts.css';
 
 let todoId = 1;
 
 export default class TodoList extends Component {
   state = {
     inputValue: '',
-    items: [],
+    items: [
+      {
+        value: 'A task',
+        key: todoId++,
+      },
+      {
+        value: 'Another task',
+        key: todoId++,
+      },
+    ],
   };
 
   onChange = event => {
@@ -42,12 +53,15 @@ export default class TodoList extends Component {
             type='text'
             onChange={this.onChange}
             value={this.state.inputValue}
+            className='todoInput'
             placeholder='Enter a task'
           />
-          <input type='submit' value='Add' />
+          <button type='submit' className='addTodoButton'>
+            Add
+          </button>
         </form>
 
-        <ul>{todoItems}</ul>
+        <ul className='todoItems'>{todoItems}</ul>
       </div>
     );
   }

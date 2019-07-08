@@ -1,7 +1,8 @@
 import React from 'react';
+import './TodoItem.css';
 
 const TodoItem = props => {
-  return <li>{props.value}</li>;
+  return <li className='todoItem'>{props.value}</li>;
 };
 
 export default TodoItem;

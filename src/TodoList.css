@@ -1,0 +1,35 @@
+.todoList {
+  margin: 10px 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.todoItems {
+  margin-top: 25px;
+}
+
+.todoInput,
+.addTodoButton {
+  -webkit-appearance: none;
+  border: none;
+  padding: 15px;
+  margin: 2px;
+  font-size: 15px;
+}
+
+.todoInput {
+  box-shadow: -11px 7px 41px -17px rgba(0, 0, 0, 0.75);
+}
+
+.todoInput:focus {
+  outline: none;
+}
+
+.addTodoButton {
+  background-color: #1b2f33;
+  box-shadow: -11px 7px 41px -5px rgba(0, 0, 0, 0.75);
+  color: white;
+}
+
+.todoInput::placeholder {
+  font-family: 'Roboto', sans-serif;
+}
