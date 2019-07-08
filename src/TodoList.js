@@ -11,11 +11,11 @@ export default class TodoList extends Component {
     items: [
       {
         value: 'A task',
-        key: todoId++,
+        id: todoId++,
       },
       {
         value: 'Another task',
-        key: todoId++,
+        id: todoId++,
       },
     ],
   };
@@ -26,7 +26,7 @@ export default class TodoList extends Component {
     });
   };
 
-  addItem = event => {
+  addTodo = event => {
     this.setState(({ inputValue, items }) => {
       if (inputValue.length === 0) {
         return null;
@@ -41,14 +41,26 @@ export default class TodoList extends Component {
     event.preventDefault();
   };
 
+  deleteTodo = id => {
+    this.setState(({ items }) => {
+      return {
+        items: items.filter(todo => todo.id !== id),
+      };
+    });
+  };
+
   render() {
     const todoItems = this.state.items.map(todo => (
-      <TodoItem value={todo.value} key={todo.id} />
+      <TodoItem
+        value={todo.value}
+        key={todo.id}
+        onClick={() => this.deleteTodo(todo.id)}
+      />
     ));
 
     return (
       <div className='todoList'>
-        <form onSubmit={this.addItem}>
+        <form onSubmit={this.addTodo}>
           <input
             type='text'
             onChange={this.onChange}

@@ -8,3 +8,7 @@
   width: 100%;
   box-shadow: -11px 7px 41px -17px rgba(0, 0, 0, 0.75);
 }
+
+.todoItem:hover {
+  cursor: pointer;
+}
