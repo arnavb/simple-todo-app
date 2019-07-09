@@ -19,11 +19,16 @@
   padding: 15px;
   margin: 2px;
   font-size: 15px;
+  box-shadow: -11px 7px 41px -17px rgba(0, 0, 0, 0.75);
 }
 
 .todoInput {
-  box-shadow: -11px 7px 41px -17px rgba(0, 0, 0, 0.75);
   width: 220px;
+  border: 1px solid #1b2f33;
+}
+
+.todoInput::placeholder {
+  font-family: 'Roboto', sans-serif;
 }
 
 .todoInput:focus {
@@ -31,11 +36,14 @@
 }
 
 .addTodoButton {
-  background-color: #1b2f33;
-  box-shadow: -11px 7px 41px -5px rgba(0, 0, 0, 0.75);
-  color: white;
+  background-color: white;
+  color: #1b2f33;
+  border: 1px solid #1b2f33;
+  cursor: pointer;
+  transition: background-color 0.5s, color 0.5s;
 }
 
-.todoInput::placeholder {
-  font-family: 'Roboto', sans-serif;
+.addTodoButton:hover {
+  background-color: #1b2f33;
+  color: white;
 }
