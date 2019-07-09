@@ -1,10 +1,15 @@
 .todoList {
   margin: 10px 0;
   font-family: 'Roboto', sans-serif;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .todoItems {
   margin-top: 25px;
+  width: 100%;
 }
 
 .todoInput,
@@ -18,6 +23,7 @@
 
 .todoInput {
   box-shadow: -11px 7px 41px -17px rgba(0, 0, 0, 0.75);
+  width: 220px;
 }
 
 .todoInput:focus {

@@ -5,8 +5,21 @@
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 5px;
   margin: 10px 0;
-  width: 100%;
   box-shadow: -11px 7px 41px -17px rgba(0, 0, 0, 0.75);
+
+  /* Handle word wrapping: 
+  https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
+  */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 
 .todoItem:hover {
