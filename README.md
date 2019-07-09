@@ -6,7 +6,7 @@ This project was meant as a way for me to learn how a React project works, nothi
 
 [Live Demo](https://x2tf6.codesandbox.io/)
 
-![https://user-images.githubusercontent.com/30810402/60864481-5db18600-a241-11e9-9ab2-4bad550f2257.png](Screenshot of app)
+![Screenshot of app](https://user-images.githubusercontent.com/30810402/60864481-5db18600-a241-11e9-9ab2-4bad550f2257.png "Screenshot of app")
 
 # Building and Running Locally
 
